@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS </title>
     <style>
-     .background{
-         background-color: aquamarine;
-        box-sizing: border-box;
-        width: 250px;
-        height: 250px;
-        margin-left: 1000000px;
-        padding: 20px 50px 60px 70px;
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing:border-box;
+        }
+
+        .parent {
+            background-color:aquamarine;
+            height: 60px;
+            padding: 20px;
+            width: 50vw;
+        }
+     .child{
+         background-color: blueviolet;
+         height: 20px;
+         width: 80%;
      }
     </style>
 </head>
 <body>
-   <div class="background">
-      <h2> Lorem </h2>
+   <div class="parent">
+       <div class="child"></div>
+     
    </div>
   
 </body>
