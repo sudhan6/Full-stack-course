@@ -11,45 +11,34 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-    
+            font-family: Metropolis;
+            margin: 4px;
         }
-
-        h2{
-            padding: 5px;
-            color: white;
-            background-color: yellow;
+        
+        div.parent {
+            background-color: #111;
+            min-height: 200px;
         }
-        h2:hover{
-            background-color: crimson;
-            cursor: pointer;
+        
+        div.child {
+            background-color: #ffbf00;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
         }
-        div::selection{
-            background-color: lime;
+        div.parent:hover div.child{
+            background-color: red;
+            transform:translate(500px)
         }
-        input:focus{
-            background-color: magenta;
-
-        }
-        h2::after {
-            content: "Im a after";
-            font-size:0.5rem;
-            color:red;
-        }
-        h2::before {
-            content: "Im a after";
-            font-size:0.5rem;
-            color:orange;
-        }
-     
     </style>
 </head>
 
 <body>
- 
-        <h2>I'm a heading</h2>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique magni mollitia dolor assumenda numquam excepturi, eveniet perferendis error, accusamus voluptatem minima eos, molestiae placeat minus laudantium dolore odit quia accusantium!</div>
-    <input type="text" />
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
-
 
 </html>
