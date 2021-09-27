@@ -5,40 +5,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Todo list</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Metropolis;
-            margin: 4px;
-        }
-        
         div.parent {
-            background-color: #111;
-            min-height: 200px;
+            background: #111;
+            font-size: 2rem;
+            color: #fff;
         }
         
-        div.child {
-            background-color: #ffbf00;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-out;
+        @media (max-width: 500px) {
+            div.parent {
+                background: #ffbf00;
+                font-size: 0.8rem;
+            }
         }
-        div.parent:hover div.child{
-            background-color: red;
-            transform:translate(500px)
+        
+        @media (max-width: 700px) {
+            div.parent {
+                background: blueviolet;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="parent">
-        <div class="child"></div>
+        <h1>I'm a heading</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, officia quibusdam? Debitis perferendis veritatis quam inventore fuga, porro enim impedit dolore natus adipisci! Repellat voluptatem voluptatum non consectetur nobis esse.
     </div>
 </body>
 
 </html>
+
