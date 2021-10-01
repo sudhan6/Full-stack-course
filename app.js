@@ -1,56 +1,55 @@
-// array
-var arr = [1,2,3,4]
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
+const add = document.querySelector('#add')
+const subtract = document.querySelector('#subtract')
+const multiply = document.querySelector('#multiply')
+const resultBox = document.querySelector('.result')
 
-console.log(typeof arr)
-arr.push(5)
-console.log(arr)
-console.log(arr.length)
+const sum = () => {
+    const result = parseInt(a.value) + parseInt(b.value)
+    resultBox.innerHTML = result
+}
 
-//operator
-var a=2
-var b=10
+const product = () => {
+    const result = parseInt(a.value) * parseInt(b.value)
+    resultBox.innerHTML = result
+}
 
-//arithematic operator
-console.log('a+b=',a+b)
-console.log('b-a=',b-a)
-console.log('b/a=',b/a)
-console.log('a*b=',a*b)
-console.log('b**a=',b**a)
-console.log('b%a=',b%a)
 
-// Assignment operator
-console.log('b ',b)
-b+=10
-console.log('b+=1',b)
-b++
-console.log('b++',b)
-b-=10
-console.log('b-=1',b)
-b--
-console.log('b--',b)
+const calculate = (event, operation) => {
+  //  console.log(event.target)
+  //  if (operation == 'add') {
+  //      console.log('adding')
+  //  } else if (operation == 'multiply') {
+  //      console.log('multiply')
+  //  }
 
-// comparison operator
-var d = 10
-var e = 2
-var f ='10'
+  switch (operation){
+      case "add":
+          resultBox.innerHTML = parseInt(a.value) + parseInt(b.value)
+         
+          break
+      case "multiply":
+        resultBox.innerHTML = parseInt(a.value) * parseInt(b.value)
+         
+         break
+      case "subtract":
+            resultBox.innerHTML = parseInt(a.value) - parseInt(b.value)
+             
+             break
+      default:
+        resultBox.innerHTML = "Not a valid operation"
+  }
+}
 
-console.log(d>e)
-console.log(d<e)
-console.log(d>=e)
-console.log(d<=e)
-console.log(d==e)
-console.warn(d == f)
-console.warn(d===f)
 
-// logical (and) operator
+add.addEventListener('click', (event) => {
+    calculate(event, 'add')
+})
 
-console.log('true && true ',true && true)
-console.log('true && false ',true &&false)
-console.log('false && true ',false && true)
-console.log('false && false ',false && false)
-
-// logical (or) operator
-console.log('true || true ',true || true)
-console.log('true || false ',true || false)
-console.log('false || true ',false || true)
-console.log('false || false ',false || false)
+subtract.addEventListener('click',(event)=>{
+    calculate(event, 'subtract') 
+})
+multiply.addEventListener('click', (event) => {
+    calculate(event, 'multiply')
+})
