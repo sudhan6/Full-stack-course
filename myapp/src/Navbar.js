@@ -2,8 +2,8 @@
 const Navbar = () => {
     return (
         <nav>
-            <a href="#">HOme</a>
-            <a href="#">ABout</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
             <a href="#">Contact</a>
         </nav>
     )
