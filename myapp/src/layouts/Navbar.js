@@ -1,5 +1,4 @@
-
-const Navbar = () => {
+const Navbar =() => {
     return (
         <nav>
             <a href="#">Home</a>
@@ -7,6 +6,6 @@ const Navbar = () => {
             <a href="#">Contact</a>
         </nav>
     )
-}
+} 
 
 export default Navbar;
