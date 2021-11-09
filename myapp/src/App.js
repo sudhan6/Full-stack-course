@@ -1,12 +1,12 @@
-import Description from './components/Description'
-
+import One from './components/One';
+import {useState } from 'react';
 
 
 const App = () => {
-
+const [data,setdata] = useState ([{password: "abcd"}, {password: "123456"}])
   return (
     <div >
-     <Description heading={'Mercedes S class'}/>
+       <One data={data}/>
     </div >
   );
 }
